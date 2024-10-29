@@ -1,0 +1,51 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    background-color: black;
+    color: aliceblue;
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    background-color: gray;
+    height: 100px;
+    padding: 15px;
+    
+}
+
+main{
+    background-color: aquamarine;
+    height: 400px;
+
+}
+
+h1{
+    padding: 15px;
+}
+
+aside{
+    float: right;
+    background-color: blueviolet;
+    height: 400px;
+    width: 300px;
+}
+
+footer{
+    background-color: black;
+    color: aliceblue;
+    height: 200px;
+    text-align: center;
+    padding: 15px;
+}

@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1600px;
+    font-family:"roboto", Arial, Helvetica, sans-serif;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --main-color: rgb(36, 73, 110);
+}
+
+h1{
+    padding: 15px;
+    background-color: var(--main-color);
+    text-align: center;
+    color: white;
+}
+
+h1 span{
+    color:yellow
+}
+
+h2{
+    text-align: center;
+    background-color: var(--main-color);
+    border-radius:15px 15px 0 0;
+    color: white;
+}
+
+h3{
+    margin-top: 10px;
+    border-bottom: solid black;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;    
+    margin-right: auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    background-color:black;
+    color:white;
+    height: 50px;
+}
+
+nav a{
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--main-color);
+}
+
+main{
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picamanda{
+    width: 200px;
+    float: right;
+    padding: 25px;
+}
+
+.card{
+    border: solid black;
+    margin:30px;
+    border-radius: 15px;
+    font-size:1.5em ;
+}
+.card p{
+    padding: 15px;
+}
+
+.picflag{
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    color: white;
+}
+
+#lastModified{
+    color: yellow;
+}
+
+
+ul{
+   padding: 70px;
+}

@@ -1,0 +1,27 @@
+.roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body{
+    font-family:"Roboto", sans-serif;
+  }
+
+  main, header, footer{
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: rgb(84, 84, 164);
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  section{
+    padding: 1rem;
+    background-color: aliceblue;
+  }

@@ -15,12 +15,14 @@ body{
 }
 
 :root{
-    --main-color:rgb(30, 129, 176);
+    --main-color:rgb(7, 89, 127);
 }
 header{
     display: flex;
     justify-content: space-between;
     place-items: center;
+    width: 100%;
+    padding: 15px;
     color:white;
     height: auto;
     background-color: var(--main-color);
@@ -37,9 +39,14 @@ nav .nav-links {
     flex-direction: column;
     width: 100%;
 }
+.nav-links a { 
+    text-decoration: none;
+    color: white;
+    }
 
-/* nav .nav-links.show {
-    display: flex; */
+nav .nav-links.show {
+    display: flex;
+}
      
 nav .hamburger { 
     display: block;
@@ -62,7 +69,8 @@ nav button{
 
 h1{
     padding: 15px;
-    font-size: 1.8em;
+    font-size: 2em;
+    flex:1;
 }
 
 main{
@@ -102,5 +110,5 @@ footer{
 }
 
 #lastModified{
-    color: yellow;
+    color: aliceblue;
 }

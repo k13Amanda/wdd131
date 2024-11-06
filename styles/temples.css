@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 100%;
+    font-family:"roboto", Arial, Helvetica, sans-serif;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --main-color:rgb(30, 129, 176);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    color:white;
+    height: auto;
+    background-color: var(--main-color);
+}
+
+nav{
+    display: flex;
+    place-items: center;
+    background-color: var(--main-color);
+}
+
+nav .nav-links { 
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* nav .nav-links.show {
+    display: flex; */
+     
+nav .hamburger { 
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav button{
+    padding-right: 25px;
+}
+
+/* nav a:hover {
+    color: yellow;
+} */
+
+     
+
+h2{
+    padding: 15px;
+    font-size: 1.8em;
+}
+
+main{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+main figure{
+    margin: 0 auto;
+    text-align: center;
+}
+figcaption{
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1{
+    margin: 0 auto;
+    margin: 1rem;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    color: white;
+}
+
+#lastModified{
+    color: yellow;
+}

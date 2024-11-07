@@ -24,12 +24,24 @@ dateSpan.textContent = `Last Modified: ${formattedDateTime}`;
 
 document.addEventListener('DOMContentLoaded', () => {
     const hambutton = document.getElementById('hambutton');
-    const navLinks = document.querySelector('.nav-links');
+    const closebutton = document.getElementById('closebutton');
+    const navOverlay = document.getElementById('navOverlay');
 
     hambutton.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
+        navOverlay.classList.toggle('show');
+    });
+
+    closebutton.addEventListener('click', () => {
+        navOverlay.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navOverlay.classList.remove('show');
+        });
     });
 });
+
 
 
 

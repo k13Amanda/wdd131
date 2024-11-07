@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     max-width: 100%;
-    font-family:"roboto", Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .roboto-regular {
@@ -14,66 +15,91 @@ body{
     font-style: normal;
 }
 
-:root{
-    --main-color:rgb(7, 89, 127);
+:root {
+    --main-color: rgb(7, 89, 127);
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
-    place-items: center;
+    align-items: center;
     width: 100%;
     padding: 15px;
-    color:white;
-    height: auto;
-    background-color: var(--main-color);
-}
-
-nav{
-    display: flex;
-    place-items: center;
-    background-color: var(--main-color);
-}
-
-nav .nav-links { 
-    display: none;
-    flex-direction: column;
-    width: 100%;
-}
-.nav-links a { 
-    text-decoration: none;
     color: white;
+    background-color: var(--main-color);
+}
+
+nav {
+    display: flex;
+    align-items: center; 
+}
+
+.nav-links {
+    flex-direction: column;
+    background-color: var(--main-color);
+}
+
+/* Style for just small screens */
+@media screen and (max-width: 639px) {
+    .nav-links-overlay {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 20%;
+        left: 80%;
+        transform: translate(-50%, -20%);
+        padding: 40px;
+        max-width: 400px;
+        background-color: var(--main-color);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
-nav .nav-links.show {
-    display: flex;
+    .nav-links-overlay.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-links a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        margin: .5rem;
+        text-align: left;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        background: none; 
+        border: none; 
+        color: white; 
+        cursor: pointer;
+    }
 }
-     
-nav .hamburger { 
-    display: block;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
 
-nav button{
-    padding-right: 25px;
-}
-
-/* nav a:hover {
-    color: yellow;
-} */
-
-     
-
-h1{
+h1 {
     padding: 15px;
     font-size: 2em;
-    flex:1;
+    flex: 1;
 }
 
-main{
+main {
     max-width: 1600px;
     margin: 0 auto;
     display: grid;
@@ -81,22 +107,22 @@ main{
     grid-template-columns: 1fr;
 }
 
-main figure{
-    margin: 0 auto;
-    text-align: center;
-}
-figcaption{
+main figure {
     margin: 0 auto;
     text-align: center;
 }
 
-h2{
+figcaption {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
     margin: 0 auto;
     margin: 1rem;
 }
 
-
-footer{
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,6 +135,6 @@ footer{
     color: white;
 }
 
-#lastModified{
+#lastModified {
     color: aliceblue;
 }

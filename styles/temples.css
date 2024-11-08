@@ -39,6 +39,58 @@ nav {
     background-color: var(--main-color);
 }
 
+h1 {
+    padding: 15px;
+    font-size: 2em;
+    flex: 1;
+}
+
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+main figure {
+    margin: 0 auto;
+    text-align: center;
+}
+
+img{
+    border: 3px solid black;
+}
+
+figcaption {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+h2 {
+    margin: 0 auto;
+    margin: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    color: white;
+}
+
+#lastModified {
+    color: aliceblue;
+}
+
+
 /* Style for just small screens */
 @media screen and (max-width: 639px) {
     .nav-links-overlay {
@@ -93,48 +145,3 @@ nav {
     }
 }
 
-h1 {
-    padding: 15px;
-    font-size: 2em;
-    flex: 1;
-}
-
-main {
-    max-width: 1600px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-}
-
-main figure {
-    margin: 0 auto;
-    text-align: center;
-}
-
-figcaption {
-    margin: 0 auto;
-    text-align: center;
-}
-
-h2 {
-    margin: 0 auto;
-    margin: 1rem;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    height: 100px;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.5em;
-    color: white;
-}
-
-#lastModified {
-    color: aliceblue;
-}

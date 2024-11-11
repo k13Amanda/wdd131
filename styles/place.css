@@ -17,7 +17,7 @@ body{
 }
 
 :root{
-    --main-color:rgb(24, 96, 130);
+    --main-color:rgb(22, 95, 129);
     --second-color: rgb(240, 209, 130);
 }
 
@@ -81,12 +81,7 @@ footer {
     font-size: 1.5em;
     color: white;
 }
-
-#lastModified {
-    color: aliceblue;
-}
-
-    
+ 
 
 /* this is for larger screens */
 @media (min-width: 1000px) {
@@ -145,7 +140,10 @@ footer {
 
     h2 img{
         display: none;
+    }
 
+    p{
+        color: white;
     }
 
     .weather h2::after { 

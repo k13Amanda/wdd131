@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Wessman">
+    <meta name="description" content="WDD 131 place page ">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&dispay=swap" rel="stylesheet">
+    <title>WDD 131 - Amanda Wessman</title>
+</head>
+
+<body>
+    <header>
+        <h1>Utah</h1>
+    </header>
+    <main>
+        <section class="hero-picture">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/arch-large-rz.webp" media="(min-width: 1000px)">
+                    <img src="images/arch-small-rz.webp" alt="Picture of Arch" width="1700" height="956">
+                </picture>
+            </div>
+            <div class="data">
+                <h2>Data</h2>
+                <p>
+                    <span class="label">Area:</span> 84,898 sq miles</span><br>
+                    <span class="label">Population:</span> 3.3 Million</span><br>
+                    <span class="label">Capital:</span> Salt Lake City</span><br>
+                    <span class="label">Languages:</span> English</span><br>
+                    <span class="label">Currency:</span> US Dollar</span><br>
+                    <span class="label">Time Zone:</span> Mountain Time</span><br>
+                    <span class="label">Calling Code:</span> +801</span><br>
+                    <span class="label">Internet TLD:</span> .us</span>
+                </p>
+            </div>
+            
+            
+            <div class="weather">
+                <h2>Weather <img src="images/weather-icon.png" alt="Weather Icon"></h2>
+                <p>
+                    <span class="label">Temperature:</span><span class="value"> 45 °F <br>
+                    <span class="label">Conditions:</span> Partly Cloudy <br>
+                    <span class="label">Wind:</span> 5 mph <br>
+                    <span class="label">Wind Chill:</span><span id="wind-chill"></span><br>
+                </p>   
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p> ©️<span id="currentyear"></span>⭐Amanda Wessman⭐ Utah</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

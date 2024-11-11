@@ -1,0 +1,159 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1600px;
+    font-family:"roboto", Arial, Helvetica, sans-serif;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --main-color:rgb(24, 96, 130);
+    --second-color: rgb(240, 209, 130);
+}
+
+h1{
+    background-color: var(--main-color);
+    text-align: center;
+    font-size:3rem ;
+    padding: 15px;
+    color: white;
+    border-bottom: 20px solid var(--second-color);
+}
+
+.hero img{
+    border-bottom: 10px solid var(--second-color);
+}
+
+picture, img { 
+    width: 100%;
+    height: auto;
+} 
+
+h2 img{
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.weather h2{
+    border-top: 1px solid black;
+    padding-top: 15px;
+}
+
+.label{
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.data, .weather{
+    text-align: center;
+    padding: 15px;
+}
+
+p{
+    font-size: 14pt;
+    line-height: 1.6;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    color: white;
+}
+
+#lastModified {
+    color: aliceblue;
+}
+
+    
+
+/* this is for larger screens */
+@media (min-width: 1000px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    main{
+        flex: 1;
+        display: flex;
+        position: relative;
+    }
+
+    .hero-picture{
+        height: 100%;
+        width: auto;
+    }
+
+    .hero img { 
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1
+    }
+
+    .data, .weather{
+        position: absolute;
+        background-color: var(--main-color);
+        z-index: 1;
+    }
+
+    .data{
+        top: 50px;
+        left: 20px;
+    }
+
+    .weather{
+        bottom: 50px;
+        right: 30px;
+    }
+
+    h2{
+        background-color: var(--second-color);
+        border: none !important;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 5px !important;
+    }
+
+    h2 img{
+        display: none;
+
+    }
+
+    .weather h2::after { 
+        content:" ⛅️";
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        font-size: 1em;
+    }
+
+}

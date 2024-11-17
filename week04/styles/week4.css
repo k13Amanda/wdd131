@@ -1,0 +1,48 @@
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+table {
+	width: 400PX;
+	margin: 10px auto;
+	border: thin solid black;
+	box-shadow: 0 0 10px gray;
+	border-collapse: collapse;
+}
+
+caption {
+ 	padding: 10px;
+  	caption-side: bottom;
+	color: black;
+	font-size: .85rem;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: lightblue;
+}
+
+th, td {
+	padding: 7px 15px;
+	border: 1px solid black;
+	white-space: pre;
+}
+
+th {
+	background-color: black;
+	font-size: larger;
+	color: white;
+}
+
+thead th, tbody td {
+    text-align: center;
+  }
+
+tbody tr:nth-child(odd) {
+	background-color: lightblue;
+}
+
+.blank {
+	background-color: #000;
+}

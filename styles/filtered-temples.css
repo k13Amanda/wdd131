@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --main-color: rgb(7, 89, 127);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    background-color: var(--main-color);
+}
+
+nav {
+    display: flex;
+    align-items: center; 
+}
+
+.nav-links {
+    flex-direction: column;
+    background-color: var(--main-color);
+}
+
+h1 {
+    padding: 15px;
+    font-size: 2em;
+    flex: 1;
+}
+
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+div {
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+h2 {
+    /* margin: 0 auto; */
+    margin: 1rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    color: white;
+}
+
+#lastModified {
+    color: aliceblue;
+}
+
+
+
+/* Card styling */
+.temple-card {
+    border: 1.5px solid black;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.temple-card img {
+    width: 100%;
+    max-width: 400px;
+    height:250px ;
+    object-fit: cover;
+    object-position: top;
+    margin: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.temple-card h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1rem;
+}
+
+.temple-card p {
+    font-size: 1em;
+    text-align: center;
+}
+
+
+
+/* Style for just small screens */
+@media screen and (max-width: 639px) {
+    .nav-links-overlay {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 20%;
+        left: 80%;
+        transform: translate(-50%, -20%);
+        padding: 40px;
+        max-width: 400px;
+        background-color: var(--main-color);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links-overlay.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-links a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        margin: .5rem;
+        text-align: left;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        background: none; 
+        border: none; 
+        color: white; 
+        cursor: pointer;
+    }
+}

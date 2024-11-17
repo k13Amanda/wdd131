@@ -48,14 +48,15 @@ h1 {
 main {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 15px;
 }
 
-div {
+#temple-container {
     margin: 0 auto;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
+    max-width: 100%;
 }
 
 h2 {
@@ -92,6 +93,8 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color: #f2f2f2;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .temple-card img {
@@ -107,7 +110,7 @@ footer {
 .temple-card h3 {
     font-size: 1.5em;
     text-align: center;
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 
 .temple-card p {

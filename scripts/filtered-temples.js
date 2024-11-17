@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 const temples = [
     {
       templeName: "Aba Nigeria",
@@ -126,49 +127,80 @@ const temples = [
       },
   ];
 
+// Function to create temple cards
+function createTempleCard(templeList) {
+  // Get the container where temple cards will be inserted
+  const templeContainer = document.getElementById('temple-container');
+  // Clear the existing content
+  templeContainer.innerHTML = "";
 
+  templeList.forEach((temple) => {
+      // Create a div element for the card
+      const card = document.createElement('div');
+      card.classList.add('temple-card');
 
-// Get the container where temple cards will be inserted
-const templeContainer = document.getElementById('temple-container');
+      // Create elements for each piece of information
+      const nameElement = document.createElement('h3');
+      nameElement.textContent = temple.templeName;
 
-// Loop through each temple and create a card
-temples.forEach((temple) => {
-    // Create a div element for the card
-    const card = document.createElement('div');
-    card.classList.add('temple-card');
+      const locationElement = document.createElement('p');
+      locationElement.textContent = `Location: ${temple.location}`;
 
-    // Create elements for each piece of information
-    const nameElement = document.createElement('h3');
-    nameElement.textContent = temple.templeName;
+      const dedicatedElement = document.createElement('p');
+      dedicatedElement.textContent = `Dedicated: ${temple.dedicated}`;
 
-    const locationElement = document.createElement('p');
-    locationElement.textContent = `Location: ${temple.location}`;
+      const areaElement = document.createElement('p');
+      areaElement.textContent = `Area: ${temple.area} sq ft`;
 
-    const dedicatedElement = document.createElement('p');
-    dedicatedElement.textContent = `Dedicated: ${temple.dedicated}`;
+      const imageElement = document.createElement('img');
+      imageElement.src = temple.imageUrl;
+      imageElement.alt = temple.templeName;
+      imageElement.loading = 'lazy'; // Use native lazy loading
 
-    const areaElement = document.createElement('p');
-    areaElement.textContent = `Area: ${temple.area} sq ft`;
+      // Add a load event listener to add the 'loaded' class when the image has fully loaded
+      imageElement.addEventListener('load', () => {
+          imageElement.classList.add('loaded');
+      });
 
-    const imageElement = document.createElement('img');
-    imageElement.src = temple.imageUrl;
-    imageElement.alt = temple.templeName;
-    imageElement.loading = 'lazy'; // Use native lazy loading
+      // Append all elements to the card
+      card.appendChild(nameElement);
+      card.appendChild(locationElement);
+      card.appendChild(dedicatedElement);
+      card.appendChild(areaElement);
+      card.appendChild(imageElement);
 
-    // Add a load event listener to add the 'loaded' class when the image has fully loaded
-    imageElement.addEventListener('load', () => {
-        imageElement.classList.add('loaded');
-    });
+      // Append the card to the container
+      templeContainer.appendChild(card);
+  });
+}
 
-    // Append all elements to the card
-    card.appendChild(nameElement);
-    card.appendChild(locationElement);
-    card.appendChild(dedicatedElement);
-    card.appendChild(areaElement);
-    card.appendChild(imageElement);
-  
+// Initial load of all temple cards
+createTempleCard(temples);
 
-    // Append the card to the container
-    templeContainer.appendChild(card);
+// Event listeners for filtering
+const oldlink = document.querySelector("#old");
+oldlink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900));
 });
+const newlink = document.querySelector("#new");
+newlink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000));
+});
+
+const homeLink = document.querySelector("#home");
+homeLink.addEventListener("click", () => {
+  createTempleCard(temples);
+});
+
+const largelink = document.querySelector("#large");
+largelink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => temple.area >= 90000));
+});
+
+const smallLink = document.querySelector("#small");
+smallLink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => temple.area < 10000));
+});
+
+
 

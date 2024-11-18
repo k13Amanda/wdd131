@@ -105,7 +105,7 @@ const temples = [
         templeName: "Layton Utah",
         location: "Layton, Utah, United States",
         dedicated: "2024, June, 16",
-        area: 514008,
+        area: 93539,
         imageUrl:
         "https://churchofjesuschristtemples.org/assets/img/temples/layton-utah-temple/layton-utah-temple-47164.jpg"
       },
@@ -113,7 +113,7 @@ const temples = [
         templeName: "Anchorage Alaska Temple",
         location: "Anchorage Alaska , United States",
         dedicated: "1999, January, 9-10",
-        area: 235224,
+        area: 11937,
         imageUrl:
         "https://churchofjesuschristtemples.org/assets/img/temples/anchorage-alaska-temple/anchorage-alaska-temple-15260.jpg"
       },
@@ -121,7 +121,7 @@ const temples = [
         templeName: "Buenos Aires Argentina Temple",
         location: "Buenos Aires, Argentina",
         dedicated: "1986, January, 17-19",
-        area: 162478.8,
+        area: 30659,
         imageUrl:
         "https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-4087.jpg"
       },
@@ -155,7 +155,7 @@ function createTempleCard(templeList) {
       const imageElement = document.createElement('img');
       imageElement.src = temple.imageUrl;
       imageElement.alt = temple.templeName;
-      imageElement.loading = 'lazy'; // Use native lazy loading
+      imageElement.loading = 'lazy';
 
       // Add a load event listener to add the 'loaded' class when the image has fully loaded
       imageElement.addEventListener('load', () => {
@@ -178,6 +178,11 @@ function createTempleCard(templeList) {
 createTempleCard(temples);
 
 // Event listeners for filtering
+const homeLink = document.querySelector("#home");
+homeLink.addEventListener("click", () => {
+  createTempleCard(temples);
+});
+
 const oldlink = document.querySelector("#old");
 oldlink.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900));
@@ -187,16 +192,10 @@ newlink.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000));
 });
 
-const homeLink = document.querySelector("#home");
-homeLink.addEventListener("click", () => {
-  createTempleCard(temples);
-});
-
 const largelink = document.querySelector("#large");
 largelink.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => temple.area >= 90000));
 });
-
 const smallLink = document.querySelector("#small");
 smallLink.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => temple.area < 10000));

@@ -5,8 +5,8 @@
 }
 
 body {
-    max-width: 100%;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    max-width: 1800px;
+    font-family: var(--main-font);
 }
 
 .roboto-regular {
@@ -15,8 +15,17 @@ body {
     font-style: normal;
 }
 
+.parkinsans-normal {
+  font-family: "Parkinsans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
     --main-color: rgb(7, 89, 127);
+    --tennis-color:  rgb(243, 239, 186);
+    --heading-font: "Parkinsans", "Roboto", Arial, Helvetica, sans-serif;
+    --main-font: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -28,6 +37,9 @@ header {
     color: white;
     background-color: var(--main-color);
 }
+a:-webkit-any-link {
+    color: var(--tennis-color)
+}
 
 nav {
     display: flex;
@@ -37,18 +49,24 @@ nav {
 .nav-links {
     flex-direction: column;
     background-color: var(--main-color);
+    font-size:1rem ;
 }
 
 h1 {
     padding: 15px;
     font-size: 2em;
     flex: 1;
+    font-family:var(--heading-font)
+}
+
+h2{
+    font-family: var(--heading-font);
 }
 
 main {
-    max-width: 1600px;
     margin: 0 auto;
     padding: 15px;
+    background-color:var(--tennis-color);
 }
 
 /* Style for just small screens */
@@ -109,9 +127,6 @@ main {
 
 
 
-
-
-
 footer{
     display: flex;
     flex-direction: column;
@@ -126,5 +141,5 @@ footer{
 }
 
 #lastModified{
-    color: yellow;
+    color: var(--tennis-color);
 }

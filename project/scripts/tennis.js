@@ -20,8 +20,6 @@ dateSpan.textContent = `Last Modified: ${formattedDateTime}`;
 
 
 
-// hambuger Button js
-
 document.addEventListener('DOMContentLoaded', () => {
     const hambutton = document.getElementById('hambutton');
     const closebutton = document.getElementById('closebutton');

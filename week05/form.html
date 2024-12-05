@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Wessman">
+    <meta name="description" content="WDD 131 Form">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+
+    <title>WDD 131 - Amanda Wessman</title>
+</head>    
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <label for="product">Product Name</label>
+            <select name="product" id="product" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select><br>
+
+            <label for="star">Overall Rating</label><br>
+<div class="rating-container">
+    <div class="rating-item">
+        <label for="one-star">☆</label>
+        <input type="radio" name="star" id="one-star" value="one">
+    </div>
+    <div class="rating-item">
+        <label for="two-stars">☆☆</label>
+        <input type="radio" name="star" id="two-stars" value="two">
+    </div>
+    <div class="rating-item">
+        <label for="three-stars">☆☆☆</label>
+        <input type="radio" name="star" id="three-stars" value="three">
+    </div>
+    <div class="rating-item">
+        <label for="four-stars">☆☆☆☆</label>
+        <input type="radio" name="star" id="four-stars" value="four">
+    </div>
+    <div class="rating-item">
+        <label for="five-stars">☆☆☆☆☆</label>
+        <input type="radio" name="star" id="five-stars" value="five">
+    </div>
+</div><br>
+
+            
+
+            <label for="date">Date of installation</label>
+            <input type="date" name="date"><br>
+
+            <label for="usefulfeatures">Which features did you find useful in the product? <br>(Check all that apply)<br></label>
+            <input type="checkbox" name="usefulfeatures" id="durability">
+            <label for="durability">Durability</label>
+            <br>
+            <input type="checkbox" name="usefulfeatures" id="easeofuse">
+            <label for="easeofuse">Ease of Use</label>
+            <br>
+            <input type="checkbox" name="usefulfeatures" id="performance">
+            <label for="performance">Performance</label>
+            <br>
+            <input type="checkbox" name="usefulfeatures" id="design">
+            <label for="design">Design</label>
+            <br><br>
+
+
+            <label for="review">Written Review <span> (Optional)</span></label><br>
+            <textarea name="review" id="review" cols="30" rows="5"></textarea><br><br>
+
+            <label for="name">Your Name<span> (Optional)</span></label>
+            <input type="text" name="name"><br><br>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    
+    <footer>
+        <p> ©️<span id="currentyear"></span>⭐Amanda Wessman⭐ Utah</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>

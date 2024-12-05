@@ -106,7 +106,7 @@ form input[type="checkbox"] {
     transform: scale(1.5);
 }
 
-span{
+label span{
     color: rgb(37, 37, 185);
 }
 

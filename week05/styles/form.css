@@ -125,6 +125,12 @@ label span{
     align-items: center;
 }
 
+main{
+    font-size: 18pt;
+    padding: 50px;
+    text-align: center;
+}
+
 footer{
     display: flex;
     flex-direction: column;

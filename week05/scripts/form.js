@@ -21,14 +21,58 @@ dateSpan.textContent = `Last Modified: ${formattedDateTime}`;
 
 // JavaScript to dynamically add options
 
-const products = ["Rackets", "Tennis Balls", "Shoes", "Bags"];
+const products = [
+    {
+        id: "fc-1888",
+        name: "flux capacitor",
+        averagerating: 4.5
+    },
+    {
+        id: "fc-2050",
+        name: "power laces",
+        averagerating: 4.7
+    },
+    {
+        id: "fs-1987",
+        name: "time circuits",
+        averagerating: 3.5
+    },
+    {
+        id: "ac-2000",
+        name: "low voltage reactor",
+        averagerating: 3.9
+    },
+    {
+        id: "jj-1969",
+        name: "warp equalizer",
+        averagerating: 5.0
+    }
+];
 
-const selectElement = document.getElementById('product');
-
-products.forEach(product => {
-    const option = document.createElement('option');
-    option.value = product;
-    option.textContent = product;
-    selectElement.appendChild(option);
+window.addEventListener('DOMContentLoaded', (event) => {
+    const select = document.getElementById('product');
+    products.forEach(product => {
+        let option = document.createElement('option');
+        option.value = product.id;
+        option.textContent = product.name;
+        select.appendChild(option);
+    });
 });
+
+
+// Check if the counter exists in localStorage
+if (!localStorage.getItem('reviewCounter')) {
+    localStorage.setItem('reviewCounter', 0);
+}
+
+// Increment the counter when the page loads
+window.addEventListener('DOMContentLoaded', (event) => {
+    let counter = parseInt(localStorage.getItem('reviewCounter'), 10);
+    counter += 1;
+    localStorage.setItem('reviewCounter', counter);
+    
+    // Display the counter value on the page
+    document.getElementById('review-count').textContent = `Reviews Completed: ${counter}`;
+});
+
 

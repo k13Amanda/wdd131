@@ -22,15 +22,15 @@
     <main>
         <form method="get" action="review.html">
 
-        <label for="product">Product Name</label>
+        <label for="product">Product Name *</label>
         <select name="product" id="product" required>
             <option value="" disabled selected>Select a Product...</option>
         </select><br>
 
-        <label for="one-star">Overall Rating</label><br>
+        <label for="one-star">Overall Rating *</label><br>
         <div class="rating-container">
             <div class="rating-item">
-                <input type="radio" name="star" id="one-star" value="one">
+                <input type="radio" name="star" id="one-star" value="one" required>
                 <label for="one-star">☆</label>
             </div>
             <div class="rating-item">
@@ -51,8 +51,8 @@
             </div>
         </div><br>
 
-        <label for="date">Date of Installation</label>
-        <input type="date" name="date" id="date"><br>
+        <label for="date">Date of Installation *</label>
+        <input type="date" name="date" id="date" required><br>
 
         <label for="durability">Which features did you find useful in the product? <br>(Check all that apply)</label><br>
         <input type="checkbox" name="usefulfeatures" id="durability">
@@ -70,7 +70,8 @@
         <label for="name">Your Name <span>(Optional)</span></label>
         <input type="text" name="name" id="name"><br><br>
 
-        <input type="submit" value="Post Review">
+        <input type="submit" value="Post Review"><br><br>
+        <p> * Required </p>
 
         </form>
     </main>

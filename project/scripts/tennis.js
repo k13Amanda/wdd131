@@ -39,3 +39,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+// JavaScript to dynamically add options
+
+const products = ["I don't know", "2.5", "3.0-3.5", "3.5-4.0", "4.0-4.5", "4.5-5.0", "5.0-5.5", "6.0 +"];
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const select = document.getElementById('product');
+    products.forEach(product => {
+        let option = document.createElement('option');
+        option.value = product; // Use the string directly as the value
+        option.textContent = product; // Use the string directly as the display text
+        select.appendChild(option);
+    });
+});
+
+
+
+// Check if the counter exists in localStorage
+if (!localStorage.getItem('reviewCounter')) {
+    localStorage.setItem('reviewCounter', 0);
+}
+
+// Increment the counter when the page loads
+window.addEventListener('DOMContentLoaded', (event) => {
+    let counter = parseInt(localStorage.getItem('reviewCounter'), 10);
+    counter += 1;
+    localStorage.setItem('reviewCounter', counter);
+    
+    // Display the counter value on the page
+    document.getElementById('review-count').textContent = `Reviews Completed: ${counter}`;
+});

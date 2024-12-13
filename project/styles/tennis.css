@@ -37,9 +37,7 @@ header {
     color: white;
     background-color: var(--main-color);
 }
-a:-webkit-any-link {
-    color: var(--tennis-color)
-}
+
 
 nav {
     display: flex;
@@ -61,6 +59,20 @@ h1 {
 
 h2{
     font-family: var(--heading-font);
+    font-size: 30pt;
+    text-align: center;
+    border-bottom: 3px dotted black;
+    padding: 15px;
+}
+
+h3{
+    font-size: 20pt;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+p{
+    font-size: 16pt;
 }
 
 main {
@@ -68,6 +80,137 @@ main {
     padding: 15px;
     background-color:var(--tennis-color);
 }
+
+.hero{
+    padding: 20px;
+    display: block;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.feet{
+    display: none;
+    border: 3px solid black;
+}
+
+.aboveform{
+    margin: 20px;
+    margin-left: 100px;
+}
+
+
+.line{
+    border-bottom: none;
+}
+
+.hub {
+    text-align: center;
+}
+
+iframe{
+    max-width: 550px;
+    width: 100%;
+}
+
+
+
+.how img, .where img {
+    max-width: 400px; 
+    width: 100%; 
+}
+
+
+
+form{
+    background-color: rgb(220, 220, 220);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 550px;
+    font-size: 14pt;
+    margin: 20px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 12pt;
+    background-color: rgb(222, 230, 238);
+    font-weight: bold;
+    
+}
+
+form input[type="text"] {
+    max-width: 500px;
+    width: 100%;
+    padding: 5pt;
+    font-size: 14pt;
+    display: block;
+}
+
+form input[type="date"] {
+    max-width: 500px;
+    width: 100%;
+    padding: 5px;
+    font-size: 14pt;
+    display: block;
+}
+
+select {
+    max-width: 500px;
+    width: 100%;
+    padding: 5px;
+    font-size: 14pt;
+    display: block;
+}
+
+textarea {
+    max-width: 500px;
+    width: 100%;
+    padding: 5px;
+    font-size: 14pt;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
+    margin-bottom: 10px; 
+    transform: scale(1.5);
+}
+
+label span{
+    color: rgb(37, 37, 185);
+}
+
+
+.submit-page{
+    font-size: 18pt;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.players, .how,.where{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.player {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+.players img {
+    float: left;
+    max-width: 200px;
+    margin-right: 30px;
+}
+
+
+
+
+
 
 /* Style for just small screens */
 @media screen and (max-width: 639px) {
@@ -141,5 +284,5 @@ footer{
 }
 
 #lastModified{
-    color: var(--tennis-color);
+    color: white;
 }

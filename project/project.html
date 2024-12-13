@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Wessman">
+    <meta name="description" content="WDD 131 Project Tennis">
+    <link rel="stylesheet" href="styles/tennis.css">
+    <link rel="stylesheet" href="styles/tennis-large.css">
+    <script src="scripts/tennis.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+
+    <title>WDD 131 - Amanda Wessman</title>
+</head>    
+<body>
+    <header>
+        <h1>Utah Play Tennis</h1>
+        <nav id="menu">
+            <button type="button" class="hamburger" id="hambutton">&#9776;</button>
+            <div class="nav-links-overlay" id="navOverlay">
+                <button class="hamburger close-btn" id="closebutton">&#x2715;</button>
+                <div class="nav-links">
+                    <a href="project.html" id="home">Home</a>
+                    <a href="howtoplay.html" id="how">How to play</a>
+                    <a href="wheretoplay.html" id="where">Where to play</a>
+                    <a href="famousplayers.html" id="players">Famous Tennis Players</a>
+                </div>
+            </div>    
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="line">Site Purpose: Information on tennis and playing tennis in Utah</h2>
+        <p class="hub">This site provides a hub for Utah Tennis by listing information along with an email event form.</p>
+        <br>
+
+        <h2>Playing Tennis in Utah</h2><br>
+
+        <h3><a href="wheretoplay.html">Where can I play tennis?</a></h3>
+        <p>You want to play tennis, this is the place to find out where you can go play.</p><br>
+
+        <h3><a href="howtoplay.html">How to play tennis?</a></h3>
+        <p>Do you want to learn how to play tennis. This page has information on the game of tennis.</p>
+    
+            
+        <img class="hero" src="images/tennisblue.webp" alt="tennis picture" loading="lazy">
+        
+
+        <h2 class="aboveform">Stay Informed Sign up below</h2>
+
+    
+        <img class="feet" src="images/tennisfeet.webp" alt="tennis picture" loading="lazy">
+               
+
+        <form method="get" action="review-tennis.html">
+
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name"><br><br>
+
+            <label for="email">Your Email *</label>
+            <input type="text" name="email" id="email" required><br><br>
+
+            <label for="product">Tennis Rating</label>
+            <select name="product" id="product">
+                <option value="" disabled selected>Select a Product...</option>
+            </select><br><br>
+    
+            <label for="durability">What items do you want to get notify about? <br>(Check all that apply)</label><br>
+            <input type="checkbox" name="usefulfeatures" id="durability">
+            <label for="durability">Tourtaments</label><br>
+            <input type="checkbox" name="usefulfeatures" id="easeofuse">
+            <label for="easeofuse">Events</label><br>
+            <input type="checkbox" name="usefulfeatures" id="performance">
+            <label for="performance">Leagues</label><br>
+            <input type="checkbox" name="usefulfeatures" id="design">
+            <label for="design">Gear Sales</label><br><br>
+    
+            <label for="review">Other Information <span>(Optional)</span></label><br>
+            <textarea name="review" id="review" cols="30" rows="5"></textarea><br><br>
+
+    
+            <input type="submit" value="Sign up for email notifications"><br><br>
+            <p> * Required </p>
+    
+        </form>
+        
+    </main>
+    
+    <footer>
+        <p> ©️<span id="currentyear"></span>⭐Amanda Wessman⭐ Utah</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>
